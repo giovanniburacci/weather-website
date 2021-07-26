@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    {{>header}}
+    <p>This is the {{page}} page</p>
+    <div style="border: 2px solid black; padding: 10px; width: 30%">
+      <h3>Senza form</h3>
+      <input id="addInput" type="text" placeholder="Insert address"/>
+      <button onclick="fetchData()">Fetch data</button>
+      <input disabled id="display" aria-multiline="true"/>
+    </div>
+    <div style="border: 2px solid black; margin-top: 30px; padding: 30px; width: 30%">
+      <h3>Con form</h3>
+      <form>
+        <input id="formInput" type="text" placeholder="Insert address"/>
+        <button type="submit">Fetch data</button>
+        <input disabled id="formDisplay" aria-multiline="true"/>
+      </form>
+    </div>
+    {{>footer}}
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
