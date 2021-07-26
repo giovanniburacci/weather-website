@@ -19,7 +19,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     const value = input.value.trim();
     if (value) {
         input.style.background = 'unset';
-        const resp = await fetch('http://localhost:3000/weather?address=' + value);
+        const resp = await fetch('/weather?address=' + value);
         const data = await resp.json();
         document.getElementById('formDisplay').value = JSON.stringify(data);
     } else {

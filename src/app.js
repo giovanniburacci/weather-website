@@ -8,6 +8,7 @@ import hbs from 'hbs';
 import { geocode } from './utils/geocode.js'
 import { forecast } from './utils/forecast.js'
 
+const port = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const pathToPublic = path.join(__dirname, '../public');
@@ -111,6 +112,6 @@ app.get('*', (req, res) => {
     })
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+app.listen(port, () => {
+    console.log('Server running on port', port);
 });
