@@ -5,7 +5,7 @@ fetchData = async () => {
     const value = input.value.trim();
     if (value) {
         input.style.background = 'unset';
-        const resp = await fetch('http://localhost:3000/weather?address=' + value);
+        const resp = await fetch('/weather?address=' + value);
         const data = await resp.json();
         document.getElementById('display').value = JSON.stringify(data);
     } else {
