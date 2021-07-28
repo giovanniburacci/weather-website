@@ -10,7 +10,7 @@ import request from 'request';
 //    - Success, pass forecast string for data (same format as from before)
 
 export const forecast = (coordinates, callback) => {
-    const url = 'http://api.weatherstack.com/current?access_key=0ac853e5f61e600229d6f4ebafc41ccf&query=' + coordinates.lat + ',' + coordinates.lon;
+    const url = 'http://api.weatherstack.com/current?access_key=hidden&query=' + coordinates.lat + ',' + coordinates.lon;
     const json = true;
     request({
         url,
